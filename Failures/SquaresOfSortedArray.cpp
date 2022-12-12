@@ -29,5 +29,7 @@ public:
            min = i+1;
        }   
      return nums;
+        
     }
+    
 };
