@@ -8,9 +8,16 @@ public:
         if(!root)
         return 0;
 
+        if(mp.find(root)!=mp.end())
+        return mp[root];
+        
         int n = 1+max(getHeight(root->left),getHeight(root->right));
+        mp[root] = n;
+        
         return n;
     }
+    
+    
 
     bool isBalanced(TreeNode* root) {
        if(!root)
